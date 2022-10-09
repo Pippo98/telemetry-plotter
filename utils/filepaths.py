@@ -19,6 +19,11 @@ PEDALS = SECONDARY + "PEDALS_OUTPUT.csv"
 STEER = SECONDARY + "STEERING_ANGLE.csv"
 CONTROL = SECONDARY + "CONTROL_OUTPUT.csv"
 
+# GPS
+PVT = GPS + "GPS_NAV_PVT.csv"
+DOP = GPS + "GPS_NAV_DOP.csv"
+LLH = GPS + "GPS_NAV_HPPOSLLH.csv"
+
 # All files
 CSV_FILES = [
     GYRO,
@@ -26,13 +31,7 @@ CSV_FILES = [
     PEDALS,
     STEER,
     CONTROL,
+    PVT,
+    DOP,
+    LLH,
 ]
-
-
-UNITS = {
-    GYRO: {"ang_rate_x": "g", "ang_rate_y": "g", "ang_rate_z": "g"},
-    ACCEL: {"accel_x": "g", "accel_y": "g", "accel_z": "g"},
-    PEDALS: {"apps": "%", "bse_front": "bar", "bse_rear": "bar"},
-    STEER: {"angle": "degrees"},
-    CONTROL: {""}
-}
